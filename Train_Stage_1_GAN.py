@@ -17,7 +17,7 @@ if __name__ == '__main__':
     stage1_generator_lr = 0.0002
     stage1_discriminator_lr = 0.0002
     stage1_lr_decay_step = 600
-    epochs = 1
+    epochs = 200
     condition_dim = 128
 
     embeddings_file_path_train = train_dir + "/char-CNN-RNN-embeddings.pickle"
@@ -146,11 +146,10 @@ if __name__ == '__main__':
             z_noise2 = np.random.normal(0, 1, size=(batch_size, z_dim))
             embedding_batch = embeddings_test[0:batch_size]
             fake_images, _ = stage1_gen.predict_on_batch([embedding_batch, z_noise2])
-            print(len(fake_images))
             # Save images
-    #         for i, img in enumerate(fake_images[:10]):
-    #             save_rgb_img(img, "results/gen_{}_{}.png".format(epoch, i))
+            for i, img in enumerate(fake_images[:10]):
+                save_rgb_img(img, "results/gen_{}_{}.png".format(epoch, i))
 
-    # # Save models
-    # stage1_gen.save_weights("stage1_gen.h5")
-    # stage1_dis.save_weights("stage1_dis.h5")
+    # Save models
+    stage1_gen.save_weights("stage1_gen.h5")
+    stage1_dis.save_weights("stage1_dis.h5")
