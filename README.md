@@ -5,3 +5,5 @@ cropping has been executed for all images to ensure that bounding boxes of birds
 The dataset can either be downloaded from https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view?usp=sharing 
 and the embeddings from here https://drive.google.com/file/d/0B3y_msrWZaXLT1BZdVdycDY5TEE/view?usp=sharing&resourcekey=0-sZrhftoEfdvHq6MweAeCjA
 download them and place them in the required folder
+
+Data models: https://drive.google.com/drive/folders/1NSzYQpbmGrd0TNj1LuMVIjipD_W-r41K?usp=sharing
