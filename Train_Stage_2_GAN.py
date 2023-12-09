@@ -28,7 +28,7 @@ if __name__ == '__main__':
     stage1_generator_lr = 0.0002
     stage1_discriminator_lr = 0.0002
     stage1_lr_decay_step = 600
-    epochs = 1
+    epochs = 50
     condition_dim = 128
 
     embeddings_file_path_train = train_dir + "/char-CNN-RNN-embeddings.pickle"
@@ -111,7 +111,7 @@ if __name__ == '__main__':
         dis_losses = []
 
         # Load data and train model
-        number_of_batches = int(X_hr_train.shape[0] / (batch_size*25))
+        number_of_batches = int(X_hr_train.shape[0] / (batch_size))
         print("Number of batches:{}".format(number_of_batches))
         for index in range(number_of_batches):
             print("Batch:{}".format(index+1))
